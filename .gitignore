@@ -24,3 +24,6 @@ dist-ssr
 *.sln
 *.sw?
 
+# plugins
+auto-imports.d.ts
+
