@@ -7,6 +7,8 @@ import "vfonts/FiraCode.css";
 
 import App from "./App.vue";
 import { createApp } from "vue";
+// pinia store
+import pinia from "@/stores";
 import { router } from "@/routes";
 
 const app = createApp(App);

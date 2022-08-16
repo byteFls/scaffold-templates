@@ -1,4 +1,9 @@
 <template>
+  <OnClickOutside @trigger="close">
+    <div u-m="8" u-bg="green-200" class="p-12 font-bold text-xl flex">
+      Welcome.
+    </div>
+  </OnClickOutside>
   <div u-m-8>
     <p>
       {{ msg }}
@@ -9,5 +14,13 @@
 
 <script setup lang="ts">
 import { NButton } from "naive-ui";
+import { OnClickOutside } from "@vueuse/components";
+
 defineProps<{ msg: string }>();
+// const isOk = ref(false);
+const demo = computed(() => {})
+
+const close = () => {
+  console.log("out side be clicked");
+};
 </script>

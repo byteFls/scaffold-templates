@@ -12,7 +12,7 @@ export const autoImportOption = {
     "pinia",
     "@vueuse/core",
   ],
-  dts: true, // or a custom path
+  dts: "./src/typings/auto-import.d.ts", // or a custom path
   vueTemplate: false,
   // Generate corresponding .eslintrc-auto-import.json file.
   // eslint globals Docs - https://eslint.org/docs/user-guide/configuring/language-options#specifying-globals
