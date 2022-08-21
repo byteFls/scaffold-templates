@@ -17,3 +17,5 @@ export const AuthStore = defineStore(
     persist: initPiniaPersist(AUTH_STORE_ID),
   }
 );
+
+export const useAuthStore = () => storeToRefs(AuthStore());

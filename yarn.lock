@@ -159,6 +159,11 @@
   resolved "https://registry.npmmirror.com/@types/node/-/node-17.0.45.tgz#2c0fafd78705e7a18b7906b5201a522719dc5190"
   integrity sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==
 
+"@types/web-bluetooth@^0.0.14":
+  version "0.0.14"
+  resolved "https://registry.npmmirror.com/@types/web-bluetooth/-/web-bluetooth-0.0.14.tgz#94e175b53623384bff1f354cdb3197a8d63cdbe5"
+  integrity sha512-5d2RhCard1nQUC3aHcq/gHzWYO6K0WJmAbjO7mQJgCQKtZpgXxv1rOM6O/dBDhDYYVutk1sciOgNSe+5YyfM8A==
+
 "@types/web-bluetooth@^0.0.15":
   version "0.0.15"
   resolved "https://registry.npmmirror.com/@types/web-bluetooth/-/web-bluetooth-0.0.15.tgz#d60330046a6ed8a13b4a53df3813c44942ebdf72"
@@ -268,6 +273,11 @@
   resolved "https://registry.npmmirror.com/@unocss/reset/-/reset-0.45.7.tgz#25cc7e87e1dd55e315752bca02ae63e4b653014f"
   integrity sha512-Gqx62iHO2hufpnS2vSm/NzCDG4UkF+XYwkKFarLzcj0UKCtOpQ9HCzSnZC422b3pM3lOvUIPpOOSncV6MUe5lg==
 
+"@unocss/reset@^0.45.8":
+  version "0.45.8"
+  resolved "https://registry.npmmirror.com/@unocss/reset/-/reset-0.45.8.tgz#675e7092b8555551b638d6012dda228d41adbd1f"
+  integrity sha512-zeIYa/d/amPhX6/del0k6K8/Hdl/nN12XCeiVfBKymlilAjQQyV64V/qdLBtSKzqegT68O/xMscla7pZDto4Hw==
+
 "@unocss/scope@0.45.7":
   version "0.45.7"
   resolved "https://registry.npmmirror.com/@unocss/scope/-/scope-0.45.7.tgz#bda4fbc106a8848d91f0839bae74b5124bbc330b"
@@ -315,6 +325,11 @@
     "@unocss/scope" "0.45.7"
     "@unocss/transformer-directives" "0.45.7"
     magic-string "^0.26.2"
+
+"@vicons/ionicons5@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.npmmirror.com/@vicons/ionicons5/-/ionicons5-0.12.0.tgz#c39fda04420dfae3b58053faf8aaf3555253299d"
+  integrity sha512-Iy1EUVRpX0WWxeu1VIReR1zsZLMc4fqpt223czR+Rpnrwu7pt46nbnC2ycO7ItI/uqDLJxnbcMC7FujKs9IfFA==
 
 "@vitejs/plugin-vue@^3.0.3":
   version "3.0.3"
@@ -485,10 +500,44 @@
     "@vueuse/shared" "9.1.0"
     vue-demi "*"
 
+"@vueuse/core@^8.0.1":
+  version "8.9.4"
+  resolved "https://registry.npmmirror.com/@vueuse/core/-/core-8.9.4.tgz#c7db40f19390b3c9f4ff9294a30461497f62ec19"
+  integrity sha512-B/Mdj9TK1peFyWaPof+Zf/mP9XuGAngaJZBwPaXBvU3aCTZlx3ltlrFFFyMV4iGBwsjSCeUCgZrtkEj9dS2Y3Q==
+  dependencies:
+    "@types/web-bluetooth" "^0.0.14"
+    "@vueuse/metadata" "8.9.4"
+    "@vueuse/shared" "8.9.4"
+    vue-demi "*"
+
+"@vueuse/metadata@8.9.4":
+  version "8.9.4"
+  resolved "https://registry.npmmirror.com/@vueuse/metadata/-/metadata-8.9.4.tgz#a4132db33e4c1b1023636acfa20aa7b37ab3d978"
+  integrity sha512-IwSfzH80bnJMzqhaapqJl9JRIiyQU0zsRGEgnxN6jhq7992cPUJIRfV+JHRIZXjYqbwt07E1gTEp0R0zPJ1aqw==
+
 "@vueuse/metadata@9.1.0":
   version "9.1.0"
   resolved "https://registry.npmmirror.com/@vueuse/metadata/-/metadata-9.1.0.tgz#194d4bd47f7acb91e348c0f436e678ddf7ee235b"
   integrity sha512-8OEhlog1iaAGTD3LICZ8oBGQdYeMwByvXetOtAOZCJOzyCRSwqwdggTsmVZZ1rkgYIEqgUBk942AsAPwM21s6A==
+
+"@vueuse/motion@^2.0.0-beta.12":
+  version "2.0.0-beta.12"
+  resolved "https://registry.npmmirror.com/@vueuse/motion/-/motion-2.0.0-beta.12.tgz#5ce0afd04f1991a87370ce90907e3979b82f6380"
+  integrity sha512-cAZqXexLX6xo+H1N1Mv+wBSSqG4wB+BdjIuHQ50jwlelXCDxSi8gj0K/9nDS+aUZtWh6YMwS6UGCKg58jMVglA==
+  dependencies:
+    "@vueuse/core" "^8.0.1"
+    "@vueuse/shared" "^8.0.1"
+    framesync "^6.1.0"
+    popmotion "^11.0.3"
+    style-value-types "^5.1.0"
+    vue-demi "*"
+
+"@vueuse/shared@8.9.4", "@vueuse/shared@^8.0.1":
+  version "8.9.4"
+  resolved "https://registry.npmmirror.com/@vueuse/shared/-/shared-8.9.4.tgz#c9741c30ffb666b50d62f0dd80b76119fd47573e"
+  integrity sha512-wt+T30c4K6dGRMVqPddexEVLa28YwxW5OFIPmzUHICjphfAuBFTTdDoyqREZNDOFJZ44ARH1WWQNCUK8koJ+Ag==
+  dependencies:
+    vue-demi "*"
 
 "@vueuse/shared@9.1.0":
   version "9.1.0"
@@ -829,7 +878,7 @@ estree-walker@^2.0.1, estree-walker@^2.0.2:
   resolved "https://registry.npmmirror.com/estree-walker/-/estree-walker-2.0.2.tgz#52f010178c2a4c117a7757cfe942adb7d2da4cac"
   integrity sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==
 
-evtd@^0.2.2, evtd@^0.2.3, evtd@^0.2.4:
+evtd@^0.2.2, evtd@^0.2.4:
   version "0.2.4"
   resolved "https://registry.npmmirror.com/evtd/-/evtd-0.2.4.tgz#0aac39ba44d6926e6668948ac27618e0795b9d07"
   integrity sha512-qaeGN5bx63s/AXgQo8gj6fBkxge+OoLddLniox5qtLAEY5HSnuSlISXVPxnSae1dWblvTh4/HoMIB+mbMsvZzw==
@@ -896,6 +945,13 @@ form-data@^4.0.0:
     combined-stream "^1.0.8"
     mime-types "^2.1.12"
 
+framesync@6.1.2, framesync@^6.1.0:
+  version "6.1.2"
+  resolved "https://registry.npmmirror.com/framesync/-/framesync-6.1.2.tgz#755eff2fb5b8f3b4d2b266dd18121b300aefea27"
+  integrity sha512-jBTqhX6KaQVDyus8muwZbBeGGP0XgujBRbQ7gM7BRdS3CadCZIHiawyzYLnafYcvZIh5j8WE7cxZKFn7dXhu9g==
+  dependencies:
+    tslib "2.4.0"
+
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmmirror.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -948,6 +1004,11 @@ has@^1.0.3:
   integrity sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
   dependencies:
     function-bind "^1.1.1"
+
+hey-listen@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.npmmirror.com/hey-listen/-/hey-listen-1.0.8.tgz#8e59561ff724908de1aa924ed6ecc84a56a9aa68"
+  integrity sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==
 
 highlight.js@^11.5.0:
   version "11.6.0"
@@ -1161,10 +1222,10 @@ ms@2.1.2:
   resolved "https://registry.npmmirror.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
-naive-ui@^2.32.1:
-  version "2.32.1"
-  resolved "https://registry.npmmirror.com/naive-ui/-/naive-ui-2.32.1.tgz#4559b0a4d31500f817b45a8465d14fd9932e8119"
-  integrity sha512-4zRHAn9d273qKWHs2ZQ+9xZmGTfxhL/CI1tj8bJkE313zjwyGRaiPbCeh3hQgrNdZWiRXdqmA442EVKHizGWeg==
+naive-ui@^2.32.2:
+  version "2.32.2"
+  resolved "https://registry.npmmirror.com/naive-ui/-/naive-ui-2.32.2.tgz#40f593df0b86b36f6af5635d9299417d45d6d96a"
+  integrity sha512-vTNuZ8LBlfo/cdiv4S8o6Cg5g7p9V9cR5rK+Fag2cplOnng5twTILD3sBaCqw3k/BV1331Xdk26ml8Me8QJ7iA==
   dependencies:
     "@css-render/plugin-bem" "^0.15.10"
     "@css-render/vue3-ssr" "^0.15.10"
@@ -1174,11 +1235,11 @@ naive-ui@^2.32.1:
     css-render "^0.15.10"
     date-fns "^2.28.0"
     date-fns-tz "^1.3.3"
-    evtd "^0.2.3"
+    evtd "^0.2.4"
     highlight.js "^11.5.0"
     lodash "^4.17.21"
     lodash-es "^4.17.21"
-    seemly "^0.3.4"
+    seemly "^0.3.6"
     treemate "^0.3.11"
     vdirs "^0.1.8"
     vooks "^0.2.12"
@@ -1306,10 +1367,10 @@ pinia-plugin-persistedstate@^2.1.1:
   resolved "https://registry.npmmirror.com/pinia-plugin-persistedstate/-/pinia-plugin-persistedstate-2.1.1.tgz#584c416cdc278689ae9d49483621ec96dcb7d6ef"
   integrity sha512-HUgsU5IRtM75eAQiIqzT3p1oPEuYH1/B2ipTMU++yE+FV0LkHaBswdKXs0RMWYCmugO8s62oxLTh/N1dLNp+5A==
 
-pinia@^2.0.18:
-  version "2.0.18"
-  resolved "https://registry.npmmirror.com/pinia/-/pinia-2.0.18.tgz#b29ed34bcb4c032b7da7c24c10db18b88d9254d8"
-  integrity sha512-I5MW05UVX6a5Djka136oH3VzYFiZUgeOApBwFjMx6pL91eHtGVlE3adjNUKLgtwGnrxiBRuJ8+4R3LKJKwnyZg==
+pinia@^2.0.20:
+  version "2.0.20"
+  resolved "https://registry.npmmirror.com/pinia/-/pinia-2.0.20.tgz#3b7f1a5a660282fab6a0c83bae62c48ee0b1bc1f"
+  integrity sha512-fdHHumXW/0U5HhxmY1emo3I4z85p8NJPdbtFQSlmJXFe3ktuF0pYNVgVtk2q+j2zCtTufY763xzaEMx0t6T59g==
   dependencies:
     "@vue/devtools-api" "^6.2.1"
     vue-demi "*"
@@ -1322,6 +1383,16 @@ pkg-types@^0.3.3:
     jsonc-parser "^3.0.0"
     mlly "^0.5.3"
     pathe "^0.3.0"
+
+popmotion@^11.0.3:
+  version "11.0.5"
+  resolved "https://registry.npmmirror.com/popmotion/-/popmotion-11.0.5.tgz#8e3e014421a0ffa30ecd722564fd2558954e1f7d"
+  integrity sha512-la8gPM1WYeFznb/JqF4GiTkRRPZsfaj2+kCxqQgr2MJylMmIKUwBfWW8Wa5fml/8gmtlD5yI01MP1QCZPWmppA==
+  dependencies:
+    framesync "6.1.2"
+    hey-listen "^1.0.8"
+    style-value-types "5.1.2"
+    tslib "2.4.0"
 
 postcss@^8.1.10, postcss@^8.4.16:
   version "8.4.16"
@@ -1412,7 +1483,7 @@ scule@^0.3.2:
   resolved "https://registry.npmmirror.com/scule/-/scule-0.3.2.tgz#472445cecd8357165a94a067f78cee40e700b596"
   integrity sha512-zIvPdjOH8fv8CgrPT5eqtxHQXmPNnV/vHJYffZhE43KZkvULvpCTvOt1HPlFaCZx287INL9qaqrZg34e8NgI4g==
 
-seemly@^0.3.4, seemly@^0.3.6:
+seemly@^0.3.6:
   version "0.3.6"
   resolved "https://registry.npmmirror.com/seemly/-/seemly-0.3.6.tgz#7ef97e8083dea00804965e2662f572a5df9cb18e"
   integrity sha512-lEV5VB8BUKTo/AfktXJcy+JeXns26ylbMkIUco8CYREsQijuz4mrXres2Q+vMLdwkuLxJdIPQ8IlCIxLYm71Yw==
@@ -1477,6 +1548,14 @@ strip-literal@^0.4.0:
   dependencies:
     acorn "^8.7.1"
 
+style-value-types@5.1.2, style-value-types@^5.1.0:
+  version "5.1.2"
+  resolved "https://registry.npmmirror.com/style-value-types/-/style-value-types-5.1.2.tgz#6be66b237bd546048a764883528072ed95713b62"
+  integrity sha512-Vs9fNreYF9j6W2VvuDTP7kepALi7sk0xtk2Tu8Yxi9UoajJdEVpNpCov0HsLTqXvNGKX+Uv09pkozVITi1jf3Q==
+  dependencies:
+    hey-listen "^1.0.8"
+    tslib "2.4.0"
+
 supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmmirror.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
@@ -1498,6 +1577,11 @@ treemate@^0.3.11:
   version "0.3.11"
   resolved "https://registry.npmmirror.com/treemate/-/treemate-0.3.11.tgz#7d52f8f69ab9ce326f8d139e0a3d1ffb25e48222"
   integrity sha512-M8RGFoKtZ8dF+iwJfAJTOH/SM4KluKOKRJpjCMhI8bG3qB74zrFoArKZ62ll0Fr3mqkMJiQOmWYkdYgDeITYQg==
+
+tslib@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.npmmirror.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
+  integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
 
 typescript@^4.6.4:
   version "4.7.4"
