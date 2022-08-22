@@ -1,25 +1,20 @@
 {
-  "name": "scaffold-templates",
-  "private": true,
-  "version": "0.0.0",
+  "name": "{{projectName}}",
+  "version": "{{version}}",
+  "author": "{{author}}",
+  "description": "{{projectDescription}}",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "prepare": "husky install",
-    "lint": ""
+    "prepare": "husky install"
   },
   "lint-staged": {
     "src/**/*.{ts,vue,scss,css}": [
       "prettier --write",
       "eslint --cache --fix"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
-    }
   },
   "dependencies": {
     "@unocss/reset": "^0.45.8",
