@@ -8,7 +8,6 @@ export const autoImportOption = {
   imports: [
     // presets
     "vue",
-    "vue-router",
     "pinia",
     "@vueuse/core",
   ],

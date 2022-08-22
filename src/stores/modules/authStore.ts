@@ -6,11 +6,9 @@ import initPiniaPersist from "@/configs/piniaPersist";
 export const AuthStore = defineStore(
   AUTH_STORE_ID,
   () => {
-    const authButtonList = ref([]);
-    const authRouteList = ref([]);
+    const authInfo = ref("");
     return {
-      authButtonList,
-      authRouteList,
+      authInfo,
     };
   },
   {
