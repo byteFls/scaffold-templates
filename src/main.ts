@@ -14,10 +14,11 @@ import { MotionPlugin } from "@vueuse/motion";
 import { createApp } from "vue";
 // pinia store
 import pinia from "@/stores";
+import { router } from "@/router";
 
 const app = createApp(App);
 
-app.use(pinia).use(MotionPlugin).mount("#app");
+app.use(router).use(pinia).use(MotionPlugin).mount("#app");
 
 // 便于调试
 if (__DEV__) {
