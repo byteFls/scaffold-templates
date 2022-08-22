@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="bg-gray-200 p-8">
+    <span class="bg-gray-200 p-8 mb-8">
       <RouterLink to="/">首页</RouterLink>
     </span>
     <HelloWorld msg="ok" />
