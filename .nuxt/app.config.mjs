@@ -1,8 +1,8 @@
 
-import { defuFn } from 'defu'
+import { defuFn } from '/Users/youyi/repos/scaffold-templates/node_modules/defu/dist/defu.mjs'
 
 const inlineConfig = {}
 
 
 
-export default defuFn(inlineConfig)
+export default /* #__PURE__ */ defuFn(inlineConfig)
