@@ -1,0 +1,62 @@
+image: docker:git
+
+variables:
+  DOCKER_DRIVER: overlay
+  DOCKER_REGISTRY_PROXY: docker.zfty.work
+  DOCKER_GROUP: { { dockerGroup } }
+  DOCKER_IMAGE_NAME: { { dockerImageName } }
+stages:
+  - build_push
+
+push_test_image:
+  before_script:
+    - export DOCKER_BUILD_TAG=$DOCKER_IMAGE_NAME":"$(cat version)"-test"
+    - export DOCKER_IMAGE_TAG_NAME=$DOCKER_REGISTRY_PROXY"/"$DOCKER_GROUP"/"$DOCKER_BUILD_TAG
+    - export DOCKER_BUILD="docker build --no-cache=false -t "$DOCKER_IMAGE_TAG_NAME" -f Dockerfile ."
+  stage: build_push
+  only:
+    - test
+  script:
+    - echo "Start building the docker image "$DOCKER_IMAGE_TAG_NAME
+    - $DOCKER_BUILD
+    - docker login $DOCKER_REGISTRY_PROXY -u $DOCKER_NAME -p $DOCKER_PASSWORD
+    - docker push $DOCKER_IMAGE_TAG_NAME
+  tags:
+    - zfty_docker
+
+push_test_image:
+  before_script:
+    - export DOCKER_BUILD_TAG=$DOCKER_IMAGE_NAME":"$(cat version)"-test"
+    - export DOCKER_IMAGE_TAG_NAME=$DOCKER_REGISTRY_PROXY"/"$DOCKER_GROUP"/"$DOCKER_BUILD_TAG
+    - export DOCKER_BUILD="docker build --no-cache=false -t "$DOCKER_IMAGE_TAG_NAME" -f Dockerfile ."
+  stage: build_push
+  only:
+    - release
+  script:
+    - echo "Start building the docker image "$DOCKER_IMAGE_TAG_NAME
+    - $DOCKER_BUILD
+    - docker login $DOCKER_REGISTRY_PROXY -u $DOCKER_NAME -p $DOCKER_PASSWORD
+    - docker push $DOCKER_IMAGE_TAG_NAME
+  tags:
+    - zfty_docker
+
+push_tags_image:
+  before_script:
+    - export DOCKER_BUILD_TAG=$DOCKER_IMAGE_NAME":"$(cat version)
+    - export DOCKER_IMAGE_TAG_NAME=$DOCKER_REGISTRY_PROXY"/"$DOCKER_GROUP"/"$DOCKER_BUILD_TAG
+    - export TX_DOCKER_IMAGE_TAG_NAME=$TX_DOCKER_REGISTRY"/"$DOCKER_GROUP"/"$DOCKER_BUILD_TAG
+    - export DOCKER_BUILD="docker build --no-cache=false -t "$DOCKER_IMAGE_TAG_NAME" -f Dockerfile ."
+  stage: build_push
+  only:
+    - tags
+  script:
+    - echo "Start building the docker image "$DOCKER_IMAGE_TAG_NAME
+    - $DOCKER_BUILD
+    - docker login $DOCKER_REGISTRY_PROXY -u $DOCKER_NAME -p $DOCKER_PASSWORD
+    - docker push $DOCKER_IMAGE_TAG_NAME
+    - echo "Start pushing the docker image to tx docker registry"
+    - docker login $TX_DOCKER_REGISTRY -u $TX_DOCKER_NAME -p $TX_DOCKER_PASSWORD
+    - docker tag $DOCKER_IMAGE_TAG_NAME $TX_DOCKER_IMAGE_TAG_NAME
+    - docker push $TX_DOCKER_IMAGE_TAG_NAME
+  tags:
+    - zfty_docker

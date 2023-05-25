@@ -11,13 +11,16 @@
     "lint:prettier": "prettier --check .",
     "lint": "yarn lint:js && yarn lint:prettier",
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "npx vitest"
   },
   "devDependencies": {
-    "@amz123/amz123-default-layout": "^1.2.2",
+    "@amz123/amz123-default-layout": "^1.2.8",
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
+    "@nuxt/test-utils": "^3.5.1",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@types/lodash-es": "^4.17.7",
     "@types/node": "^18",
     "@typescript-eslint/parser": "^5.59.7",
     "autoprefixer": "^10.4.14",
@@ -26,16 +29,24 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
+    "nitropack": "^2.4.1",
     "nuxt": "^3.5.1",
     "postcss": "^8.4.23",
     "prettier": "^2.8.8",
     "sass": "^1.62.1",
     "tailwindcss": "^3.3.2",
-    "typescript": "^5.0.4"
+    "type-fest": "^3.11.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.31.1"
   },
   "dependencies": {
+    "@tanstack/vue-query": "^4.29.7",
     "amz123-global-user-info": "^0.2.10",
     "amz123-public-utils": "^1.9.76",
-    "axios": "^1.4.0"
+    "axios": "^1.4.0",
+    "consola": "^3.1.0",
+    "lodash-es": "^4.17.21",
+    "ohmyfetch": "^0.4.21",
+    "vue-toastification": "^2.0.0-rc.5"
   }
 }

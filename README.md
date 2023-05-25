@@ -1,25 +1,21 @@
-# Nuxt 3 Minimal Starter
+# {{ projectName }}
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+{{ projectDescription }}
 
-## Setup
+## 初始化
 
-Make sure to install the dependencies:
+> 本项目基于 Node v{{nodeVersion}}
+
+描述初始化项目流程
 
 ```bash
 # yarn
 yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install
 ```
 
-## Development Server
+## 开发服务器
 
-Start the development server on `http://localhost:3000`
+Start the development server on `http://127.0.0.1:{{ port }}`
 
 ```bash
 npm run dev
