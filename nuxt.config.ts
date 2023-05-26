@@ -16,4 +16,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  devServer: {
+    port: (process.env.PORT as unknown as number) || 3000,
+  },
 });
